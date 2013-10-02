@@ -166,7 +166,7 @@ my %vhARPRepLog : shared;
 # Returns a string of two default controllers (to support
 # failover testing)
 ###############################################################
-sub nftest_default_controllers { return "tcp:127.0.0.1:6633,tcp:127.0.0.1:6634"; }
+sub nftest_default_controllers { return "tcp:127.0.0.1:6653,tcp:127.0.0.1:6654"; }
 
 ###############################################################
 # Name: nftest_parse_controllers

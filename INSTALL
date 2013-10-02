@@ -307,7 +307,7 @@ Controller Setup
 
 On the machine that is to be the OpenFlow controller, start the
 "controller" program listening for connections from switches on TCP
-port 6633 (the default), as shown below.
+port 6653 (the default), as shown below.
 
    # controller -v ptcp:
 
@@ -368,7 +368,7 @@ switch, follow the procedure below.
 
 4. Run ofprotocol to start the secure channel connecting the datapath to
    a remote controller.  If the controller is running on host
-   192.168.1.2 port 6633 (the default port), the ofprotocol invocation
+   192.168.1.2 port 6653 (the default port), the ofprotocol invocation
    would look like this:
 
       # ofprotocol unix:/var/run/dp0.sock tcp:192.168.1.2
@@ -408,7 +408,7 @@ controllers and one for switches.  If you have an established PKI,
 OpenFlow can use it directly.  Otherwise, refer to "Establishing a
 Public Key Infrastructure" below.
 
-To configure the controller to listen for SSL connections on port 6633
+To configure the controller to listen for SSL connections on port 6653
 (the default), invoke it as follows:
 
       # controller -v pssl: --private-key=PRIVKEY --certificate=CERT \
@@ -423,7 +423,7 @@ with the instructions below, then the invocation would look like:
       # controller -v pssl: --private-key=ctl-privkey.pem \
             --certificate=ctl-cert.pem --ca-cert=pki/switchca/cacert.pem
 
-To configure a switch to connect to a controller running on port 6633
+To configure a switch to connect to a controller running on port 6653
 (the default) on host 192.168.1.2 over SSL, invoke ofprotocol as follows:
 
       # ofprotocol -v DATAPATH ssl:192.168.1.2 --private-key=PRIVKEY \

@@ -5,7 +5,7 @@
 # For this test to work, the switch must be set up to use our
 # two "controllers", e.g.
 #
-# ofprotocol --controller=tcp:127.0.0.1:6633,tcp:127.0.0.1:6634
+# ofprotocol --controller=tcp:127.0.0.1:6653,tcp:127.0.0.1:6654
 #
 # If you use different ports than the defaults, then you must
 # pass the --controller option into this script as well.
